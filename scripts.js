@@ -1,3 +1,4 @@
+const allButtonNodes = document.querySelectorAll('.calc-btn');
 const outputNode = document.getElementsByClassName('output-row')[0];
 const blankBtn = document.getElementById('blank-btn');
 const equalsBtn = document.getElementById('equals-btn');
@@ -15,6 +16,17 @@ function clearText() {
     outputNode.innerHTML = '';
 }
 
+function defaultAction() {
+    outputNode.innerHTML = '<span>No</span>';
+}
+
+allButtonNodes.forEach(node => {
+    node.addEventListener('click', defaultAction);
+});
+
 blankBtn.addEventListener('click', showMessage);
+blankBtn.removeEventListener('click', defaultAction);
 equalsBtn.addEventListener('click', writeText);
+equalsBtn.removeEventListener('click', defaultAction);
 clearBtn.addEventListener('click', clearText);
+clearBtn.removeEventListener('click', defaultAction);

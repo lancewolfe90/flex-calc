@@ -23,7 +23,7 @@ main {
     margin: auto;
     padding: 10px;
     background-color: palevioletred;
-    box-shadow: 5px 5px 5px black; /* come back */
+    box-shadow: 5px 5px 5px black;
 }
 
 .calc-row {
@@ -62,15 +62,20 @@ box-shadow: none;
     font-style: italic;
 }
 
-.clear-btn {
+#clear-btn {
     background-color: red;
-    /* flex: 2; */
+    flex: 2;
+    margin-right: 5px;
+}
+
+#blank-btn {
+    margin-right: 5px;
 }
 
 .number-btn {
     background-color: purple;
 }
 
-.equals-btn {
+#equals-btn {
     background-color: white;
 }
