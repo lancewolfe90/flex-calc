@@ -64,6 +64,7 @@ box-shadow: none;
 
 .clear-btn {
     background-color: red;
+    /* flex: 2; */
 }
 
 .number-btn {
